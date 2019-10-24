@@ -1,0 +1,16 @@
+
+.welcome {
+    &__msg {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__control-buttons-container {
+        display: flex;
+        justify-content: center;
+        height: 35px;
+    }
+    &__control-btn {
+        margin-right: 10px;
+    }
+}

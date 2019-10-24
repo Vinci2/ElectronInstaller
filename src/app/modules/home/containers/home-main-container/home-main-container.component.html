@@ -1,0 +1,20 @@
+<div *ngIf="fetchingPath$ | async" class="home__fetching-path-msg">Fetching path...</div>
+
+<section *ngIf="!(fetchingPath$ | async) && !(installing$ | async)">
+  <div class="home__path-container">
+    <label class="home__path-label">Path</label>
+    <input
+      class="home__path-input"
+      placeholder="Please provide path..."
+      [value]="path$ | async"
+      (keyup)="onInputChange($event.target.value)">
+    <button class="home__select-path-button" (click)="onOpenDialog()">...</button>
+  </div>
+  <div class="home__control-buttons-container">
+    <button class="home__next-btn" [disabled]="!(path$ | async)" (click)="onInstall()">INSTALL</button>
+  </div>
+</section>
+
+<div *ngIf="installing$ | async" class="home__installing-msg">
+  INSTALLING under path: {{path$ | async}}
+</div>

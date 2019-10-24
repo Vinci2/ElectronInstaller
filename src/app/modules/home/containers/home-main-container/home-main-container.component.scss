@@ -1,0 +1,36 @@
+.home {
+  &__path-container {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 0 10%;
+      text-align: center;
+      display: flex;
+      height: 35px;
+      justify-content: center;
+      align-items: center;
+  }
+  &__path-input {
+      flex: 1 1 0;
+      height: 100%;
+      font-size: 16px;
+      padding: 5px;
+      color: grey;
+  }
+  &__path-label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  &__select-path-button{
+      height: 100%;
+      letter-spacing: 2px;
+      font-weight: bold;
+  }
+  &__control-buttons-container {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+  }
+  &__fetching-path-msg {
+      text-align: center;
+  }
+}
